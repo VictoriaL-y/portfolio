@@ -1,0 +1,316 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F2C9CC;
+    font-family: monospace;
+}
+
+/* Navigation Bar*/
+#navBar {
+    background-color: #F2939B;
+    color: white;
+    font-size: calc(0.6rem + 0.5vw)
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+    margin: 15px auto;
+    list-style-type: none;
+}
+
+nav li {
+    margin: 0 2rem;
+}
+
+nav li:hover {
+    color: #8f393d;
+}
+
+#welcome-section {
+    background-image: url(https://res.cloudinary.com/devqm7qmb/image/upload/v1661303982/pawel-czerwinski-hR545CzxZxk-unsplash_ypvggx.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.welcome-container {
+    width: fit-content;
+    text-align: center;
+}
+
+#welcome-section p {
+    margin: 0 auto;
+    font-size: calc(1rem + 0.5vw)
+}
+
+/* Animation of the h1 in the welcome-section */
+#welcome-section h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden;
+    border-right: .15em solid transparent;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+        typing 2.2s steps(27, end),
+        blink-caret 1.2s step-end 2;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: orange
+    }
+    50% {
+        border-color: transparent
+    }
+}
+
+/* Animation of the p in the welcome-section */
+#welcome-section p {
+    color: #fff;
+    font-family: monospace;
+
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+        typingSecond 1.5s steps(15, end),
+        blink-caretSecond 1.2s step-end 7;
+    animation-delay: 2.2s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+/* The typing effect */
+@keyframes typingSecond {
+    from {
+        width: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caretSecond {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange
+    }
+}
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+#projects-section {
+    text-align: center;
+    padding: 10rem 2rem 8rem 2rem;
+}
+
+#projects-section h2 {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    color: #8f393d;
+    border-bottom: 0.15rem solid #8f393d;
+}
+
+#projects-section .card {
+    background-color: #F2939B;
+}
+
+#projects-section .img-container,
+#projects-section .img-with-insqription {
+    overflow: hidden;
+}
+
+#projects-section img,
+#projects-section .img-with-insqription {
+    transition: all .3s ease-out;
+}
+
+#projects-section img:hover,
+#projects-section .img-with-insqription:hover img {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.img-with-insqription {
+    position: relative;
+}
+
+.img-with-insqription:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: large;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#projects-section span {
+    transition: color 0.3s ease-out;
+    color: #F2939B;
+}
+
+#projects-section .card:hover span {
+    color: white;
+}
+
+#projects-section a {
+    color: #8f393d;
+    text-decoration: none;
+}
+
+hr {
+    border: 2px solid #8f393d;
+    margin: 0;
+}
+
+/* Contact section */
+
+#contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 100vw;
+    color: #8f393d;
+}
+
+#contact-section {
+    background-color: #F4D7D9;
+}
+
+#contact-section .links a:hover {
+    transform: translateX(0px) translateY(5px);
+    border: none;
+    color: #F2939B;
+}
+
+#contact-section .links a {
+
+    transition: transform 0.3s ease-out;
+    color: #8f393d;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+
+    background-color: #F2939B;
+
+}
+
+footer a {
+    color: #8f393d;
+}
+
+footer p {
+    color: white;
+    font-size: 0.9rem;
+    margin: 1rem;
+}
+
+/* Media */
+
+@media screen and (max-width: 899px) {
+    footer p {
+        font-size: calc(0.4rem + 0.5vw);
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    h1 {
+        font-size: calc(1.1rem + 1.2vw);
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #navBar,
+    p,
+    .btn {
+        font-size: calc(0.5rem + 1vw);
+    }
+
+    h1 {
+        font-size: calc(0.8rem + 1.1vw);
+    }
+
+    h2 {
+        font-size: calc(0.9rem + 1.1vw);
+    }
+
+    #projects-section {
+        text-align: center;
+        padding: 7rem 2rem 5rem 2rem;
+    }
+
+    #projects-section h2 {
+        margin: 0 auto 4rem auto;
+    }
+
+    footer p {
+        text-align: center;
+    }
+}

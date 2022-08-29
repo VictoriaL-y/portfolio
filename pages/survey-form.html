@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Coffee shop Survey form</title>
+    <link rel="stylesheet" type="text/css" href="../styles/survey-form.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+    <h1 id="title">Survey form</h1>
+    <p id="description">Thank you for taking the time to help us improve the "Coffee shop"</p>
+    <form action="https://victorial-y.github.io/coffe-shop-survey-form" id="survey-form">
+        <fieldset>
+            <label id="name-label">Name <input id="name" type="text" placeholder="Enter your name" required /></label>
+            <label id="email-label">Email <input id="email" type="email" placeholder="Enter your Email"
+                    required /></label>
+            <label id="number-label">Age (optional) <input id="number" type="number" min="13" max="120"
+                    placeholder="Age" /></label>
+            <label>How did you know about us?
+                <select id="dropdown">
+                    <option value="">(select one)</option>
+                    <option value="1">internet</option>
+                    <option value="2">friends</option>
+                    <option value="3">other</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <lable>Would you recommend "Coffee shop" to a friend? </lable>
+            <label><input type="radio" name="like/dislike" value="yes" class="inline" /> Yes</label>
+            <label><input type="radio" name="like/dislike" value="no" class="inline" /> No</label>
+        </fieldset>
+        <fieldset>
+            <label>What do you the most like in "Coffee shop"?
+                <select name="favorite-item">
+                    <option value="">(select one)</option>
+                    <option value="Hot">Hot drinks</option>
+                    <option value="Cold">Cold drinks</option>
+                    <option value="Desserts">Desserts</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <label> What would you like to see improved? (Check all that apply)</label>
+            <label><input type="checkbox" name="improvements" value="service" class="inline" /> Service</label>
+            <label><input type="checkbox" name="improvements" value="cleanliness" class="inline" /> Cleanliness</label>
+            <label><input type="checkbox" name="improvements" value="food-quality" class="inline" /> Food
+                quality</label>
+            <label><input type="checkbox" name="improvements" value="prices" class="inline" /> Prices</label>
+        </fieldset>
+        <fieldset>
+            <label>Any comments or suggestions?:
+                <textarea name="comments" rows="3" cols="30" placeholder="Enter your comment here..."></textarea>
+            </label>
+        </fieldset>
+        <div class="submitBtn">
+            <input id="submit" type="submit" value="Submit" class="btn" />
+        </div>
+    </form>
+</body>
+
+</html>

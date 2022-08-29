@@ -1,0 +1,120 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://res.cloudinary.com/devqm7qmb/image/upload/v1654904173/nathan-dumlao-71u2fOofI-U-unsplash_elgoh0.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: repeat;
+    background-color: #3f592c;
+    font-family: 'Cormorant SC', serif;
+    font-size: 16px;
+}
+
+h1,
+p {
+    margin: 1em auto;
+    text-align: center;
+    color: #f9f7f7;
+}
+
+form {
+    width: 80vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+fieldset {
+    background-color: #f9f7f7;
+    border: none;
+    padding: 2rem 2rem;
+    color: #59372a;
+}
+
+fieldset:first-of-type {
+    border-radius: 4px 4px 0 0;
+}
+
+fieldset:last-of-type {
+    border-radius: 0 0 4px 4px;
+}
+
+fieldset:not(:last-of-type) {
+    border-bottom: 3px solid #8c6a56;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+    color: #59372a;
+    border: 1px solid #8c6a56;
+    font-family: 'Cormorant SC', serif;
+    border-radius: 7px;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+.inline {
+    width: unset;
+    margin: -1% 0.5em 0 0;
+    vertical-align: middle;
+
+}
+
+/* input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-family: 'Cormorant SC', serif;
+    font-size: 1.1rem;
+    color: #f9f7f7;
+    background-color: #59372a;
+    border-color: #8c6a56;
+    min-width: 300px;
+} */
+
+.submitBtn {
+    width: fit-content;
+    margin: 20px auto;
+}
+
+input[type="submit"].btn:hover,
+input[type="submit"].btn:focus {
+    background-color: #59372a;
+    color: white;
+}
+
+input[type="submit"].btn:hover {
+    border: 1px solid #8c6a56;
+}
+
+input[type="submit"].btn:focus {
+    box-shadow: 2px 2px 2px 2px #8c6a56;
+}
+
+.btn {
+    margin: 1em auto;
+    background-color: #8c6a56;
+    color: white;
+    border: 1px solid #59372a;
+    display: block;
+    width: 140px;
+    height: 40px;
+    padding: 0 1vw 0 1vw;
+    margin: 0;
+    font-size: 1.2em;
+}
