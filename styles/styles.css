@@ -158,18 +158,18 @@ nav li:hover {
     background-color: #F2939B;
 }
 
-#projects-section .img-container,
-#projects-section .img-with-insqription {
+#projects-section .img-with-insqription,
+#projects-section .img-container {
     overflow: hidden;
 }
 
-#projects-section img,
-#projects-section .img-with-insqription {
+#projects-section .img-with-insqription,
+#projects-section img {
     transition: all .3s ease-out;
 }
 
-#projects-section img:hover,
-#projects-section .img-with-insqription:hover img {
+#projects-section .img-with-insqription:hover img,
+#projects-section img:hover {
     transform: scale(1.1);
     filter: brightness(80%);
 }
@@ -209,7 +209,15 @@ nav li:hover {
     color: #F2939B;
 }
 
-#projects-section .card:hover span {
+#projects-section .card:hover p:not(.studyParty) span {
+    color: white;
+}
+
+#projects-section p.studyParty:hover {
+    text-decoration: line-through;
+}
+
+#projects-section p:not(.studyParty):hover {
     color: white;
 }
 
