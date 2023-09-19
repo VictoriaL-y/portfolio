@@ -209,15 +209,15 @@ nav li:hover {
     color: #F2939B;
 }
 
-#projects-section .card:hover p:not(.studyParty) span {
+#projects-section .card:hover p:not(.notAvailable) span {
     color: white;
 }
 
-#projects-section p.studyParty:hover {
+#projects-section p.notAvailable:hover {
     text-decoration: line-through;
 }
 
-#projects-section p:not(.studyParty):hover {
+#projects-section p:not(.notAvailable):hover {
     color: white;
 }
 
